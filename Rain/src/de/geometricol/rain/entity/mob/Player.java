@@ -10,6 +10,7 @@ public class Player extends Mob {
 
 	public Player(Keyboard input) {
 		this.input = input;
+		sprite = Sprite.playerUp;
 	}
 
 	public Player(int x, int y, Keyboard input) {

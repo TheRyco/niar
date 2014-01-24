@@ -6,21 +6,25 @@ public class Sprite {
 	private int x, y;
 	public int[] pixels;
 	private SpriteSheet sheet;
+	public boolean flipX;
+	public boolean flipY;
 
-	public static Sprite grass = new Sprite(16, 0, 0, SpriteSheet.tiles);
+	public static Sprite grass = new Sprite(16, 0, 0, SpriteSheet.tiles, false, false);
 	public static Sprite voidSprite = new Sprite(16, 0x2184FF);
 	
-	public static Sprite playerDown = new Sprite(16, 2, 15, SpriteSheet.tiles);
-	public static Sprite playerUp = new Sprite(16, 0, 15, SpriteSheet.tiles);
-	public static Sprite playerLeft = new Sprite(16, 3, 15, SpriteSheet.tiles);
-	public static Sprite playerRight = new Sprite(16, 1, 15, SpriteSheet.tiles);
+	public static Sprite playerDown = new Sprite(16, 2, 13, SpriteSheet.tiles, false, false);
+	public static Sprite playerUp = new Sprite(16, 0, 13, SpriteSheet.tiles, false, false);
+	public static Sprite playerRight = new Sprite(16, 1, 13, SpriteSheet.tiles, false, false);
+	public static Sprite playerLeft = new Sprite(16, 1, 13, SpriteSheet.tiles, true, false);
 
-	public Sprite(int size, int x, int y, SpriteSheet sheet) {
+	public Sprite(int size, int x, int y, SpriteSheet sheet, boolean flipX, boolean flipY) {
 		SIZE = size;
 		pixels = new int[SIZE * SIZE];
 		this.x = x * size;
 		this.y = y * size;
 		this.sheet = sheet;
+		this.flipX = flipX;
+		this.flipY = flipY;
 		load();
 	}
 	

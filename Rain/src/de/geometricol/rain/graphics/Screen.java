@@ -56,11 +56,19 @@ public class Screen {
 
 		for (int y = 0; y < 16; y++) {
 			int ya = y + yp;
+			int ys;
+			if(sprite.flipY) ys = 15 - y;
+			else ys = y;
+			
 			for (int x = 0; x < 16; x++) {
 				int xa = x + xp;
+				int xs;
+				if(sprite.flipX) xs = 15 - x;
+				else xs = x;
+				
 				if (xa < -16 || xa >= width || ya < 0 || ya >= height) break;
 				if (xa < 0) xa = 0;
-				int col = sprite.pixels[x + y * 16];
+				int col = sprite.pixels[xs + ys * 16];
 				if (col != 0xFFFF00FF) pixels[xa + ya * width] = col;				
 			}
 		}
