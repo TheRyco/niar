@@ -66,6 +66,7 @@ public class Screen {
 				if(sprite.flipX) xs = 15 - x;
 				else xs = x;
 				
+				
 				if (xa < -16 || xa >= width || ya < 0 || ya >= height) break;
 				if (xa < 0) xa = 0;
 				int col = sprite.pixels[xs + ys * 16];
