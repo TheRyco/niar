@@ -7,6 +7,7 @@ public class RockTile extends Tile{
 
 	public RockTile(Sprite sprite) {
 		super(sprite);
+
 	}
 	
 	public void render(int x, int y, Screen screen) {
@@ -15,6 +16,7 @@ public class RockTile extends Tile{
 	
 	public boolean solid() {
 		return true;
+
 	}
 
 }
