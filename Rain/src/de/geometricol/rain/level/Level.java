@@ -9,6 +9,7 @@ public class Level {
 	protected int width, height;
 	protected int[] tilesInt;
 
+	
 	//generate level constructor
 	public Level(int width, int height) {
 		this.width = width;
