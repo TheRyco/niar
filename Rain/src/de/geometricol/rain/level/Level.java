@@ -8,6 +8,7 @@ public class Level {
 	protected Tile[] tiles;
 	protected int width, height;
 	protected int[] tilesInt;
+	
 
 	//generate level constructor
 	public Level(int width, int height) {
