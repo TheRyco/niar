@@ -1,5 +1,8 @@
 package de.geometricol.rain;
 
+
+//just a test line of code
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
