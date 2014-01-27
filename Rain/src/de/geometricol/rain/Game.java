@@ -15,7 +15,7 @@ import de.geometricol.rain.entity.mob.Player;
 import de.geometricol.rain.graphics.Screen;
 import de.geometricol.rain.input.Keyboard;
 import de.geometricol.rain.level.Level;
-import de.geometricol.rain.level.RandomLevel;
+import de.geometricol.rain.level.SpawnLevel;
 
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
@@ -47,7 +47,7 @@ public class Game extends Canvas implements Runnable {
 		screen = new Screen(width, height);
 		frame = new JFrame();
 		key = new Keyboard();
-		level = new RandomLevel(64, 64);
+		level = new SpawnLevel("/textures/level.png");
 		player = new Player(key);
 
 		addKeyListener(key);
@@ -119,6 +119,7 @@ public class Game extends Canvas implements Runnable {
 		level.render(xScroll, yScroll, screen);
 		player.render(screen);
 
+		
 		for (int i = 0; i < pixels.length; i++) {
 			pixels[i] = screen.pixels[i];
 		}
