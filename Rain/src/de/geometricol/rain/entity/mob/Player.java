@@ -20,6 +20,7 @@ public class Player extends Mob {
 		this.x = x;
 		this.y = y;
 		this.input = input;
+		sprite = Sprite.boyUp;
 	}
 
 	public void update() {

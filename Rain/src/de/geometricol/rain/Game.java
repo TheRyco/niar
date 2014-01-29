@@ -51,7 +51,7 @@ public class Game extends Canvas implements Runnable {
 		frame = new JFrame();
 		key = new Keyboard();
 		level = new SpawnLevel("/textures/level.png");
-		player = new Player(key);
+		player = new Player(4*16+8,2*16+8,key);
 
 		addKeyListener(key);
 	}
@@ -82,16 +82,33 @@ public class Game extends Canvas implements Runnable {
 		requestFocus();
 
 		while (running) {
+			int missedUpdates = 0;
+			int missedRenders = 0;
 			long now = System.nanoTime();
 			delta += (now - lastTime) / ns;
 			lastTime = now;
 			while (delta >= 1) {
+				try{
 				update();
 				updates++;
 				delta--;
+				}catch (Exception e){
+					e.printStackTrace();
+					missedUpdates++;
+					System.out.println("Missed Update! " + missedUpdates);
+				}
 			}
+			
+			try{
 			render();
 			frames++;
+			}catch (Exception e){
+				e.printStackTrace();
+				missedUpdates++;
+				System.out.println("Missed Render! " + missedUpdates);
+			}
+			
+			
 
 			if (System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
@@ -119,6 +136,7 @@ public class Game extends Canvas implements Runnable {
 		screen.clear();
 		int xScroll = player.x - screen.width / 2;
 		int yScroll = player.y - screen.height / 2;
+		
 		level.render(xScroll, yScroll, screen);
 		player.render(screen);
 

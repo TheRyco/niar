@@ -29,6 +29,28 @@ public class Sprite {
 	public static Sprite playerUp2 = new Sprite(16, 0, 15, SpriteSheet.tiles, false, false);
 	public static Sprite playerRight2 = new Sprite(16, 1, 15, SpriteSheet.tiles, false, false);
 	public static Sprite playerLeft2 = new Sprite(16, 1, 15, SpriteSheet.tiles, true, false);
+	
+	public static Sprite boyUp = new Sprite(16, 3, 0, SpriteSheet.boy, false, false);
+	public static Sprite boyDown = new Sprite(16, 0, 0, SpriteSheet.boy, false, false);
+	public static Sprite boyLeft = new Sprite(16, 1, 0, SpriteSheet.boy, false, false);
+	public static Sprite boyRight = new Sprite(16, 2, 0, SpriteSheet.boy, false, false);
+	
+	public static Sprite boyUp1 = new Sprite(16, 3, 1, SpriteSheet.boy, false, false);
+	public static Sprite boyDown1 = new Sprite(16, 0, 1, SpriteSheet.boy, false, false);
+	public static Sprite boyLeft1 = new Sprite(16, 1, 1, SpriteSheet.boy, false, false);
+	public static Sprite boyRight1 = new Sprite(16, 2, 1, SpriteSheet.boy, false, false);
+	
+	public static Sprite boyUp2 = new Sprite(16, 3, 0, SpriteSheet.boy, false, false);
+	public static Sprite boyDown2 = new Sprite(16, 0, 2, SpriteSheet.boy, false, false);
+	public static Sprite boyLeft2 = new Sprite(16, 1, 2, SpriteSheet.boy, false, false);
+	public static Sprite boyRight2 = new Sprite(16, 2, 2, SpriteSheet.boy, false, false);
+	
+	public static Sprite boyUp3 = new Sprite(16, 3, 0, SpriteSheet.boy, false, false);
+	public static Sprite boyDown3 = new Sprite(16, 0, 2, SpriteSheet.boy, false, false);
+	public static Sprite boyLeft3 = new Sprite(16, 1, 2, SpriteSheet.boy, false, false);
+	public static Sprite boyRight3 = new Sprite(16, 2, 2, SpriteSheet.boy, false, false);
+	
+	
 
 	public Sprite(int size, int x, int y, SpriteSheet sheet, boolean flipX, boolean flipY) {
 		SIZE = size;
